@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="phonebook.PhoneBookController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ComboBox fx:id="contactBox" prefWidth="150.0">
+            <items>
+               <FXCollections fx:factory="observableArrayList">
+                  <String fx:id="familyBook" fx:value="Family" />
+                  <String fx:id="friendsBook" fx:value="Friends" />
+                  <String fx:id="workBook" fx:value="Work" />
+               </FXCollections>
+            </items>
+            </ComboBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <TextField fx:id="nameTF" />
+            <TextField fx:id="numberTF" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+         <children>
+            <Button fx:id="addNumberButton" mnemonicParsing="false" onAction="#addNumber" text="add number" />
+            <Button fx:id="getNumberButton" mnemonicParsing="false" onAction="#getNumber" text="get number" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="86.0" prefWidth="174.0">
+         <children>
+            <TextField fx:id="resultTF" editable="false" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
